@@ -1,6 +1,5 @@
 # Mixxx Mappings for Numark Mixtrack Pro II
 
-# Todo
-- Scratch / JogWheel
+## Todo
 - Shift Button
 - FX knobs
