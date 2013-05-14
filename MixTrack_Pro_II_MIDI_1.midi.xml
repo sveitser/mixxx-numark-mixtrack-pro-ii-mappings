@@ -8,7 +8,7 @@
         <forums>http://mixxx.org/forums/viewtopic.php?f=7&amp;t=3828</forums>
         <wiki>http://www.mixxx.org/wiki/doku.php/numark_mixtrack_pro</wiki>
     </info>
-    <controller id="MixTrack">
+    <controller id="Numark MixTrack Pro II">
         <scriptfiles>
             <file functionprefix="NumarkMTPII" filename="Numark-Mixtrack-Pro-II-scripts.js"/>
         </scriptfiles>

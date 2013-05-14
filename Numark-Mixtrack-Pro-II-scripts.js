@@ -604,7 +604,8 @@ NumarkMTPII.jogWheel = function(channel, control, value, status, group) {
 		}
 
 	}
-
+    print("scratch tick")
+    print(adjustedJog)
 	engine.scratchTick(deck, adjustedJog);
 
 	if (engine.getValue(group,"play")) {
@@ -621,6 +622,7 @@ NumarkMTPII.jogWheel = function(channel, control, value, status, group) {
 
 
 NumarkMTPII.jogWheelStopScratch = function(deck) {
+    print("disable scratch")
 	NumarkMTPII.scratchTimer[deck-1] = -1;
 	engine.scratchDisable(deck);
 
@@ -636,8 +638,8 @@ NumarkMTPII.jogWheelStopScratch = function(deck) {
 NumarkMTPII.wheelTouch = function(channel, control, value, status, group){
 
 	var deck = NumarkMTPII.groupToDeck(group);
-
-	if(!value){
+	
+    if(!value){
 
 		NumarkMTPII.touch[deck-1]= false;
 
@@ -663,8 +665,10 @@ NumarkMTPII.wheelTouch = function(channel, control, value, status, group){
 
 		if (NumarkMTPII.scratchTimer[deck-1] != -1) engine.stopTimer(NumarkMTPII.scratchTimer[deck-1]);
 
+        print("enabling scratch")
 		// change the 600 value for sensibility
 		engine.scratchEnable(deck, 600, 33+1/3, 1.0/8, (1.0/8)/32);
+        //engine.scratchEnable(deck, 128, 33+1/3, 1.0/8, (1.0/8)/32);
 
 		NumarkMTPII.touch[deck-1]= true;
 	}
