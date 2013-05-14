@@ -620,6 +620,46 @@ NumarkMTPII.jogWheel = function(channel, control, value, status, group) {
 
 }
 
+//// The button that enables/disables scratching
+//NumarkMTPII.wheelTouch = function (channel, control, value, status, group) {
+//	var deck = NumarkMTPII.groupToDeck(group);
+//    if ((status & 0xF0) == 0x90) {    // If button down
+//  //if (value == 0x7F) {  // Some wheels send 0x90 on press and release, so you need to check the value
+//        var alpha = 1.0/8;
+//        var beta = alpha/32;
+//        print("scr enab")
+//        engine.scratchEnable(deck, 128, 33+1/3, alpha, beta);
+//        // Keep track of whether we're scratching on this virtual deck - for v1.10.x or below
+//        // NumarkMTPII.scratching[deck] = true;
+//    }
+//    else {    // If button up
+//        engine.scratchDisable(deck);
+//        //NumarkMTPII.scratching[deck] = false;  // Only for v1.10.x and below
+//    }
+//}
+// 
+//// The wheel that actually controls the scratching
+//NumarkMTPII.wheelTurn = function (channel, control, value, status, group) {
+//	var deck = NumarkMTPII.groupToDeck(group);
+//    // See if we're scratching. If not, skip this.
+//    if (!engine.isScratching(deck)) return; // for 1.11.0 and above
+//    //if (!NumarkMTPII.scratching[deck]) return; // for 1.10.x and below
+// 
+//    // --- Choose only one of the following!
+// 
+//    // A: For a control that centers on 0:
+//    var newValue;
+//    if (value-64 > 0) newValue = value-128;
+//    else newValue = value;
+// 
+//    // B: For a control that centers on 0x40 (64):
+//    var newValue=(value-64);
+// 
+//    // --- End choice
+// 
+//    // In either case, register the movement
+//    engine.scratchTick(deck,newValue);
+//}
 
 NumarkMTPII.jogWheelStopScratch = function(deck) {
     print("disable scratch")
