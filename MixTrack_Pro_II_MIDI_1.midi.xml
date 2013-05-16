@@ -113,6 +113,15 @@
                 </options>
             </control>
             <control>
+                <group>[Channel1]</group>
+                <key>loop_out</key>
+                <status>0x80</status>
+                <midino>0x54</midino>
+                <options>
+                    <normal/>
+                </options>
+            </control>
+            <control>
                 <group>[Playlist]</group>
                 <key>NumarkMTPII.selectKnob</key>
                 <status>0xB0</status>
@@ -150,6 +159,15 @@
             </control>
             <control>
                 <group>[Channel1]</group>
+                <key>NumarkMTPII.jogWheel</key>
+                <status>0xB0</status>
+                <midino>0x19</midino>
+                <options>
+                    <script-binding/>
+                </options>
+            </control>
+            <control>
+                <group>[Channel1]</group>
                 <key>reloop_exit</key>
                 <status>0x90</status>
                 <midino>0x55</midino>
@@ -167,15 +185,6 @@
                 </options>
             </control>
             <control>
-                <group>[Channel1]</group>
-                <key>NumarkMTPII.jogWheel</key>
-                <status>0xB0</status>
-                <midino>0x19</midino>
-                <options>
-                    <script-binding/>
-                </options>
-            </control>
-            <control>
                 <group>[Channel2]</group>
                 <key>NumarkMTPII.jogWheel</key>
                 <status>0xB0</status>
@@ -186,20 +195,11 @@
             </control>
             <control>
                 <group>[Channel1]</group>
-                <key>NumarkMTPII.loopOut</key>
+                <key>loop_out</key>
                 <status>0x90</status>
                 <midino>0x54</midino>
                 <options>
-                    <script-binding/>
-                </options>
-            </control>
-            <control>
-                <group>[Channel2]</group>
-                <key>NumarkMTPII.loopOut</key>
-                <status>0x90</status>
-                <midino>0x57</midino>
-                <options>
-                    <script-binding/>
+                    <normal/>
                 </options>
             </control>
             <control>
@@ -284,21 +284,21 @@
                 </options>
             </control>
             <control>
-                <group>[Channel1]</group>
-                <key>NumarkMTPII.playbutton</key>
-                <status>0x90</status>
-                <midino>0x3B</midino>
-                <options>
-                    <script-binding/>
-                </options>
-            </control>
-            <control>
                 <group>[Channel2]</group>
                 <key>loop_halve</key>
                 <status>0x80</status>
                 <midino>0x64</midino>
                 <options>
                     <normal/>
+                </options>
+            </control>
+            <control>
+                <group>[Channel1]</group>
+                <key>NumarkMTPII.playbutton</key>
+                <status>0x90</status>
+                <midino>0x3B</midino>
+                <options>
+                    <script-binding/>
                 </options>
             </control>
             <control>
@@ -811,17 +811,17 @@
                 <group>[Channel2]</group>
                 <key>play</key>
                 <status>0x90</status>
-                <midino>0x42</midino>
-                <on>0x00</on>
-                <off>0x64</off>
+                <midino>0x3C</midino>
+                <on>0x64</on>
                 <maximum>0.1</maximum>
             </output>
             <output>
                 <group>[Channel2]</group>
                 <key>play</key>
                 <status>0x90</status>
-                <midino>0x3C</midino>
-                <on>0x64</on>
+                <midino>0x42</midino>
+                <on>0x00</on>
+                <off>0x64</off>
                 <maximum>0.1</maximum>
             </output>
             <output>
@@ -846,17 +846,17 @@
                 <group>[Channel1]</group>
                 <key>play</key>
                 <status>0x90</status>
-                <midino>0x3B</midino>
-                <on>0x00</on>
-                <off>0x64</off>
+                <midino>0x33</midino>
+                <on>0x64</on>
                 <maximum>0.1</maximum>
             </output>
             <output>
                 <group>[Channel1]</group>
                 <key>play</key>
                 <status>0x90</status>
-                <midino>0x33</midino>
-                <on>0x64</on>
+                <midino>0x3B</midino>
+                <on>0x00</on>
+                <off>0x64</off>
                 <maximum>0.1</maximum>
             </output>
             <output>
